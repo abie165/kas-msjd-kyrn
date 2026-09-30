@@ -23,7 +23,7 @@
 
 <main class="container">
   <section class="welcome panel-lite">
-    <div><span class="pill">🏡 Untuk Warga</span><h2>Informasi Kas RT</h2></div>
+    <div><span class="pill">🏡 Untuk Warga</span><h2>Laporan Keuangan RT</h2></div>
     <div class="today" id="todayText"></div>
   </section>
 
@@ -36,7 +36,7 @@
 
   <section class="panel">
     <div class="panel-head">
-      <div><div class="section-kicker">RIWAYAT</div><h2>📋 Laporan Kas</h2><p id="status">Memuat data...</p></div>
+      <div><h2>📋 Riwayat Kas</h2><p id="status">Memuat data...</p></div>
       <div class="toolbar">
         <select id="year"><option value="all">Semua tahun</option></select>
         <select id="month"><option value="all">Semua bulan</option></select>
@@ -57,8 +57,8 @@
   </section>
 
   <section class="reports-grid">
-    <article class="panel report-card"><div class="section-kicker">RINGKASAN</div><h2>📊 Rekap Bulan Terpilih</h2><div class="bar"><span>Pemasukan</span><b id="selectedIncome">Rp0</b></div><div class="progress"><i id="incomeBar"></i></div><div class="bar"><span>Pengeluaran</span><b id="selectedExpense">Rp0</b></div><div class="progress"><i id="expenseBar"></i></div><div class="report-balance"><span>Saldo periode</span><strong id="selectedBalance">Rp0</strong></div></article>
-    <article class="panel report-card"><div class="section-kicker">KEAMANAN</div><h2>🔐 Akses Bendahara</h2><p>Warga dapat melihat laporan. Hanya Ketua/Bendahara yang dapat menambah, mengubah, dan menghapus transaksi.</p><div class="secure-note">🛡️ Data tersimpan di Firebase-Firestore.</div></article>
+    <article class="panel report-card"><div class="section-kicker"></div><h2>📊 Rekap Bulan Terpilih</h2><div class="bar"><span>Pemasukan</span><b id="selectedIncome">Rp0</b></div><div class="progress"><i id="incomeBar"></i></div><div class="bar"><span>Pengeluaran</span><b id="selectedExpense">Rp0</b></div><div class="progress"><i id="expenseBar"></i></div><div class="report-balance"><span>Saldo periode</span><strong id="selectedBalance">Rp0</strong></div></article>
+    <article class="panel report-card"><div class="section-kicker"></div><h2>🔐 Akses Bendahara</h2><p>Warga dapat melihat laporan. Hanya Ketua/Bendahara yang dapat menambah, mengubah, dan menghapus transaksi.</p><div class="secure-note">🛡️ Data tersimpan di Firebase-Firestore.</div></article>
   </section>
 
   <section id="adminPanel" class="panel hidden admin-panel">
