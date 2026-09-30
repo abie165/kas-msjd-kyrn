@@ -4,61 +4,102 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#0b7a53">
+  <meta name="description" content="Kas RT-01 Kiyaran, Gombang, transparan dan tertib.">
   <title>Kas RT-01 • Kiyaran</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="hero">
-  <div>
-    <div class="eyebrow">TRANSPARANSI KEUANGAN WARGA</div>
-    <h1>Kas RT-01</h1>
-    <p>Kiyaran, Gombang, Sawit, Boyolali</p>
+  <div class="hero-inner">
+    <div class="brand-mark">KAS</div>
+    <div>
+      <div class="eyebrow">TRANSPARANSI KEUANGAN WARGA</div>
+      <h1>Kas RT-01</h1>
+      <p>Kiyaran, Gombang, Sawit, Boyolali</p>
+    </div>
+    <button id="loginBtn" class="btn light">🔐 Login Bendahara</button>
   </div>
-  <button id="loginBtn" class="btn light">🔐 Login Bendahara</button>
 </header>
 
 <main class="container">
+  <section class="welcome panel-lite">
+    <div><span class="pill">🏡 Untuk Warga</span><h2>Informasi Kas RT yang Terbuka</h2><p>Data kas dapat dipantau warga. Pengelolaan transaksi hanya untuk Bendahara.</p></div>
+    <div class="today" id="todayText"></div>
+  </section>
+
   <section class="cards">
-    <article class="card balance"><span>💰 Saldo Kas</span><strong id="saldo">Rp0</strong></article>
-    <article class="card income"><span>📥 Pemasukan</span><strong id="pemasukan">Rp0</strong></article>
-    <article class="card expense"><span>📤 Pengeluaran</span><strong id="pengeluaran">Rp0</strong></article>
+    <article class="card balance"><div class="card-icon">💰</div><span>Saldo Kas</span><strong id="saldo">Rp0</strong><small>Saldo berjalan</small></article>
+    <article class="card income"><div class="card-icon">📥</div><span>Total Pemasukan</span><strong id="pemasukan">Rp0</strong><small id="incomeCount">0 transaksi</small></article>
+    <article class="card expense"><div class="card-icon">📤</div><span>Total Pengeluaran</span><strong id="pengeluaran">Rp0</strong><small id="expenseCount">0 transaksi</small></article>
+    <article class="card transactions"><div class="card-icon">📋</div><span>Jumlah Transaksi</span><strong id="transactionCount">0</strong><small>Semua transaksi</small></article>
   </section>
 
   <section class="panel">
     <div class="panel-head">
-      <div><h2>📋 Laporan Kas</h2><p id="status">Memuat data...</p></div>
-      <div class="filters">
+      <div><div class="section-kicker">RIWAYAT KEUANGAN</div><h2>📋 Laporan Kas</h2><p id="status">Memuat data...</p></div>
+      <div class="toolbar">
+        <select id="year"><option value="all">Semua tahun</option></select>
         <select id="month"><option value="all">Semua bulan</option></select>
-        <input id="search" placeholder="Cari transaksi...">
+        <select id="typeFilter"><option value="all">Semua jenis</option><option value="pemasukan">Pemasukan</option><option value="pengeluaran">Pengeluaran</option></select>
+        <input id="search" placeholder="🔎 Cari transaksi..." aria-label="Cari transaksi">
+        <button id="printBtn" class="btn secondary">🖨️ Cetak</button>
       </div>
+    </div>
+    <div class="summary-strip">
+      <span>Menampilkan <b id="filteredCount">0</b> transaksi</span><span id="filterSummary">Semua data</span>
     </div>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Tanggal</th><th>Jenis</th><th>Keterangan</th><th>Nominal</th><th id="aksiHead">Aksi</th></tr></thead>
+        <thead><tr><th>Tanggal</th><th>Jenis</th><th>Keterangan</th><th>Nominal</th><th id="aksiHead">Akses</th></tr></thead>
         <tbody id="rows"><tr><td colspan="5" class="empty">Belum ada data.</td></tr></tbody>
       </table>
     </div>
   </section>
 
-  <section id="adminPanel" class="panel hidden">
-    <div class="panel-head"><div><h2>🧾 Kelola Transaksi</h2><p>Khusus bendahara.</p></div><button id="logoutBtn" class="btn danger">Keluar</button></div>
+  <section class="reports-grid">
+    <article class="panel report-card"><div class="section-kicker">RINGKASAN</div><h2>📊 Rekap Bulan Terpilih</h2><div class="bar"><span>Pemasukan</span><b id="selectedIncome">Rp0</b></div><div class="progress"><i id="incomeBar"></i></div><div class="bar"><span>Pengeluaran</span><b id="selectedExpense">Rp0</b></div><div class="progress"><i id="expenseBar"></i></div><div class="report-balance"><span>Saldo periode</span><strong id="selectedBalance">Rp0</strong></div></article>
+    <article class="panel report-card"><div class="section-kicker">KEAMANAN</div><h2>🔐 Akses Bendahara</h2><p>Warga dapat melihat laporan. Hanya Ketua/Bendahara yang dapat menambah, mengubah, dan menghapus transaksi.</p><div class="secure-note">🛡️ Data tersimpan di Firebase-Firestore.</div></article>
+  </section>
+
+  <section id="adminPanel" class="panel hidden admin-panel">
+    <div class="panel-head"><div><div class="section-kicker">MODE BENDAHARA</div><h2>🧾 Kelola Transaksi</h2><p id="loginStatus">Akses Bendahara aktif.</p></div><div class="admin-actions"><button id="changePasswordBtn" class="btn secondary">🔑 Ganti Password</button><button id="logoutBtn" class="btn danger">Keluar</button></div></div>
     <form id="txForm" class="form">
       <input type="hidden" id="editId">
       <label>Tanggal<input type="date" id="tanggal" required></label>
-      <label>Jenis<select id="jenis"><option value="pemasukan">Masuk</option><option value="pengeluaran">Keluar</option></select></label>
-      <label>Nominal (Rp)<input type="number" id="nominal" min="0" step="1" required></label>
+      <label>Jenis<select id="jenis"><option value="pemasukan">📥 Pemasukan</option><option value="pengeluaran">📤 Pengeluaran</option></select></label>
+      <label>Nominal (Rp)<input type="number" id="nominal" min="1" step="1" required placeholder="Contoh: 50000"></label>
       <label class="wide">Keterangan<input id="keterangan" maxlength="150" placeholder="Contoh: Iuran warga September" required></label>
       <div class="form-actions"><button class="btn primary" type="submit" id="saveBtn">➕ Simpan Transaksi</button><button class="btn secondary" type="button" id="cancelBtn">Batal</button></div>
     </form>
   </section>
 
-  <section class="notice">
-    <b>🔎 Informasi:</b> Laporan ini dapat dilihat seluruh warga. Hak tambah, edit, dan hapus hanya Ketua/Bendahara.
-  </section>
+  <section class="notice"><b>🔎 Transparansi:</b> Laporan kas dapat dilihat seluruh warga. Hak tambah, edit, dan hapus hanya Ketua/Bendahara.</section>
 </main>
 
-<footer>Kas RT-01 Kiyaran • Transparan, tertib, guyub, lan rukun</footer>
+<footer><strong>Kas RT-01 Kiyaran</strong><br>Transparan • Tertib • Guyub • Lan Rukun</footer>
 
+<div id="loginModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+  <div class="modal-card">
+    <button class="modal-close" data-close="loginModal">×</button>
+    <div class="modal-icon">🔐</div><h2 id="loginTitle">Login Bendahara</h2><p>Masukkan password Bendahara. Email tidak perlu diketik.</p>
+    <label>Password<input id="loginPassword" type="password" autocomplete="current-password" placeholder="Masukkan password"></label>
+    <button id="doLoginBtn" class="btn primary full">LOGIN</button>
+    <p class="modal-help">Jika password lupa, gunakan email pemulihan Firebase atau minta pengelola aplikasi melakukan reset.</p>
+  </div>
+</div>
+
+<div id="passwordModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="passwordTitle">
+  <div class="modal-card">
+    <button class="modal-close" data-close="passwordModal">×</button>
+    <div class="modal-icon">🔑</div><h2 id="passwordTitle">Ganti Password</h2><p>Masukkan password lama dan password baru.</p>
+    <label>Password lama<input id="oldPassword" type="password" autocomplete="current-password"></label>
+    <label>Password baru<input id="newPassword" type="password" autocomplete="new-password" minlength="6"></label>
+    <label>Ulangi password baru<input id="newPassword2" type="password" autocomplete="new-password" minlength="6"></label>
+    <button id="savePasswordBtn" class="btn primary full">Simpan Password</button>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
 <script type="module" src="app.js"></script>
 </body>
 </html>
