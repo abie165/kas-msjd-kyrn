@@ -2,5 +2,9 @@
 @media print{.table-wrap{max-height:none;overflow:visible}.table-wrap::-webkit-scrollbar{display:none}th{position:static;box-shadow:none}}
 .transaction-type{font-weight:700}.transaction-type.masuk{color:#1A8361}.transaction-type.keluar{color:#B22222}
 
+/* Warna bilangan pemasukan dan pengeluaran sesuai permintaan: hanya angka terkait yang diubah. */
+#pemasukan,#selectedIncome{color:#168a54}
+#pengeluaran,#selectedExpense{color:#b22222}
+
 /* Perubahan tampilan: sembunyikan kartu Jumlah Transaksi dan strip ringkasan jumlah transaksi; data transaksi tetap tersimpan. */
 .card.transactions,.summary-strip{display:none!important}
