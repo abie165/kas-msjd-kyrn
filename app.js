@@ -50,7 +50,7 @@ function render(){
 function resetForm(){$("editId").value="";$('tanggal').value=new Date().toISOString().slice(0,10);$("jenis").value="pemasukan";$("nominal").value="";$("keterangan").value="";$("saveBtn").textContent="➕ Simpan Transaksi";editing=false}
 function openModal(id){$(id).classList.remove("hidden");setTimeout(()=>$(id).querySelector("input")?.focus(),50)}function closeModal(id){$(id).classList.add("hidden")}
 
-fillMonths();$("todayText").textContent=today();resetForm();
+fillMonths();resetForm();
 ["year","month","typeFilter"].forEach(id=>$(id).addEventListener("change",render));$("search").addEventListener("input",render);
 $("printBtn").onclick=()=>window.print();
 $("loginBtn").onclick=()=>{if(BENDAHARA_EMAIL.includes("GANTI_DENGAN")){alert("Email Bendahara belum diatur di app.js. Isi BENDAHARA_EMAIL dengan email akun Bendahara Firebase terlebih dahulu.");return}$("loginPassword").value="";openModal("loginModal")};
