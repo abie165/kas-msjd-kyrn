@@ -65,5 +65,22 @@ $("cancelBtn").onclick=resetForm;
 document.querySelectorAll("[data-close]").forEach(b=>b.onclick=()=>closeModal(b.dataset.close));document.querySelectorAll(".modal").forEach(m=>m.addEventListener("click",e=>{if(e.target===m)closeModal(m.id)}));
 
 onAuthStateChanged(auth,user=>{$("adminPanel").classList.toggle("hidden",!user);$("loginBtn").classList.toggle("hidden",!!user);$("aksiHead").textContent=user?"Aksi":"Akses";if(user)$("loginStatus").textContent=`Login sebagai ${user.email}`;render()});
-const q=query(collection(db,"transaksi"),orderBy("tanggal","desc"));
-onSnapshot(q,snap=>{transactions=snap.docs.map(d=>({id:d.id,...d.data()}));fillYears();render()},err=>{$("status").textContent="Database belum tersambung. Periksa Firebase dan Security Rules.";console.error(err)});
+const q=query(collection(db,"transaksi"));
+onSnapshot(q,snap=>{
+  transactions=snap.docs.map(d=>({id:d.id,...d.data()}));
+  transactions.sort((a,b)=>{
+    // Urutan utama: waktu pertama kali diinput.
+    // Data lama: jika createdAt belum ada, gunakan updatedAt sebagai cadangan.
+    // Jika keduanya tidak ada, baru gunakan tanggal transaksi.
+    const timeOf = x => {
+      const ts = x.createdAt || x.updatedAt;
+      if (ts?.toMillis) return ts.toMillis();
+      if (ts?.seconds) return ts.seconds * 1000;
+      const d = x.tanggal ? new Date(x.tanggal + "T00:00:00").getTime() : 0;
+      return Number.isNaN(d) ? 0 : d;
+    };
+    const ta=timeOf(a), tb=timeOf(b);
+    return tb-ta;
+  });
+  fillYears();render();
+},err=>{$("status").textContent="Database belum tersambung. Periksa Firebase dan Security Rules.";console.error(err)});
