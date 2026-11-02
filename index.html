@@ -1,104 +1,120 @@
 <!doctype html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0b7a53">
-  <meta name="description" content="Masjid Al-Muqarrabillah, Makmur • Berkah">
-  <title>Kas Masjid • Kiyaran</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b5d45">
+<title>Masjid Al-Muqarrabillah Kiyaran</title>
+<style>
+:root{--green:#0b5d45;--green2:#13785a;--mint:#eaf7f0;--gold:#d6ad55;--ink:#18352b;--muted:#6c8178;--line:#dce9e2;--paper:#f5f8f6;--white:#fff;--red:#b42318;--shadow:0 8px 28px #143b2b0d}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0;border-radius:10px;padding:10px 14px;background:var(--green);color:#fff;font-weight:650}button:hover{filter:brightness(1.06)}button.secondary{background:#e8f1ec;color:var(--green)}button.danger{background:#fff0ef;color:var(--red)}button.small{padding:6px 9px;font-size:12px}.wrap{max-width:1240px;margin:auto;padding:20px}.hero{background:linear-gradient(120deg,#073f30,#0e7453);color:#fff;border-radius:22px;padding:26px 28px;position:relative;overflow:hidden;box-shadow:var(--shadow)}.hero:after{content:"☾";position:absolute;right:28px;top:-28px;font-size:150px;color:#ffffff12}.brand{display:flex;align-items:center;gap:14px}.logo{width:58px;height:58px;border-radius:17px;background:#ffffff1a;border:1px solid #ffffff45;display:grid;place-items:center;font-size:30px}.eyebrow{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:#cbe9d9;font-weight:700}.hero h1{font-size:clamp(23px,4vw,34px);margin:3px 0 5px}.hero p{margin:0;color:#e1f3e9}.datebar{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}.pill{border:1px solid #ffffff38;background:#ffffff13;border-radius:999px;padding:7px 12px;font-size:13px}.tabs{display:flex;gap:7px;overflow:auto;padding:14px 0 9px;position:sticky;top:0;background:var(--paper);z-index:4}.tab{white-space:nowrap;background:transparent;color:#496459;border:1px solid transparent}.tab.active{background:var(--green);color:#fff}.section{display:none}.section.active{display:block}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:15px;margin:15px 0}.card{background:var(--white);border:1px solid var(--line);border-radius:17px;padding:18px;box-shadow:var(--shadow);min-width:0}.span-12{grid-column:span 12}.span-8{grid-column:span 8}.span-7{grid-column:span 7}.span-6{grid-column:span 6}.span-5{grid-column:span 5}.span-4{grid-column:span 4}.span-3{grid-column:span 3}.card h2,.card h3{margin:0 0 12px}.card h2{font-size:18px}.card h3{font-size:15px}.muted{color:var(--muted)}.metric{font-size:clamp(21px,3vw,29px);font-weight:800;letter-spacing:-.03em;margin-top:4px}.metric.in{color:#087a51}.metric.out{color:#c04b3d}.metric.balance{color:var(--green)}.label{font-size:12px;color:var(--muted);font-weight:700}.prayer-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}.prayer{background:var(--mint);border-radius:12px;padding:12px 8px;text-align:center}.prayer b{display:block;font-size:17px;color:var(--green)}.prayer span{font-size:12px;color:var(--muted)}.row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.row h2{margin-bottom:0}.actions{display:flex;gap:7px;flex-wrap:wrap}.notice{padding:11px 13px;border-radius:11px;background:#fff8e7;border:1px solid #f0dfb2;color:#775719;font-size:13px}.ok{background:#eaf7f0;border-color:#cde8d8;color:#1c6448}.error{background:#fff0ef;border-color:#f1c9c5;color:#a42b22}.tablewrap{overflow:auto;margin-top:12px}table{width:100%;border-collapse:collapse;min-width:720px}th,td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--line);font-size:13px;vertical-align:top}th{background:#f5f9f6;color:#526a5f;font-size:11px;text-transform:uppercase;letter-spacing:.05em}td a{color:var(--green)}.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}.empty{text-align:center;padding:30px;color:var(--muted)}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field{display:flex;flex-direction:column;gap:5px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:700;color:#526a5f}.field input,.field select,.field textarea{width:100%;padding:10px 11px;border:1px solid #cbdcd2;border-radius:10px;background:#fff;color:var(--ink)}.field textarea{min-height:78px;resize:vertical}.divider{border:0;border-top:1px solid var(--line);margin:16px 0}.listitem{padding:12px 0;border-bottom:1px solid var(--line)}.listitem:last-child{border-bottom:0}.listitem b{display:block}.tag{font-size:11px;border-radius:999px;padding:4px 8px;background:#eaf4ee;color:#27644b;display:inline-block}.foot{padding:22px 0;text-align:center;color:var(--muted);font-size:12px}.hidden{display:none!important}.authbox{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.status{font-size:12px}.status:before{content:"●";margin-right:6px;color:#299b67}.status.off:before{color:#d39b2a}.modalback{position:fixed;inset:0;background:#10271dcc;display:none;align-items:center;justify-content:center;padding:16px;z-index:10}.modalback.show{display:flex}.modal{background:#fff;border-radius:18px;padding:22px;width:min(560px,100%);max-height:92vh;overflow:auto}.modal h2{margin-top:0}.person{display:flex;align-items:flex-start;gap:12px}.avatar{width:42px;height:42px;flex:0 0 42px;border-radius:50%;background:var(--mint);display:grid;place-items:center;color:var(--green);font-weight:800}.smallnote{font-size:12px;color:var(--muted)}@media(max-width:800px){.span-8,.span-7,.span-6,.span-5,.span-4,.span-3{grid-column:span 12}.prayer-grid{grid-template-columns:repeat(3,1fr)}.wrap{padding:12px}.hero{padding:20px}.tabs{margin:0 -12px;padding-left:12px;padding-right:12px}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.metric{font-size:25px}}
+</style>
 </head>
 <body>
+<div class="wrap">
 <header class="hero">
-  <div class="hero-inner">
-    <div class="brand-mark"></div>
-    <div>
-      <div class="eyebrow">TRANSPARANSI KEUANGAN MASJID</div>
-      <h1>🕌 Al-Muqarrabillah</h1>
-      <p>Kiyaran, Gombang, Sawit, Boyolali</p>
-    </div>
-    
-    <button id="loginBtn" class="btn light">🔐 Login Bendahara</button>
-  </div>
+ <div class="brand"><div class="logo">🕌</div><div><div class="eyebrow">Pusat Informasi & Layanan Jamaah</div><h1>Masjid Al-Muqarrabillah</h1><p>Kiyaran, Sawit, Boyolali, Jawa Tengah</p></div></div>
+ <div class="datebar"><span class="pill" id="dateMasehi">Memuat tanggal…</span><span class="pill" id="dateHijri">Memuat tanggal Hijriah…</span><span class="pill">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</span></div>
 </header>
-
-<main class="container">
-  <section class="welcome panel-lite">
-    <div><span class="pill"></span><h2>📝 Laporan Keuangan Masjid</h2></div>
-  </section>
-
-  <section class="cards">
-    <article class="card balance"><div class="card-icon"><b>💰 Saldo Kas</b></div><strong id="saldo">Rp0</strong><small>Saldo berjalan</small></article>
-    <article class="card income"><div class="card-icon"><b>📥 Total Pemasukan</b></div><strong id="pemasukan">Rp0</strong><small id="incomeCount">0 transaksi</small></article>
-    <article class="card expense"><div class="card-icon"><b>📤 Total Pengeluaran</b></div><strong id="pengeluaran">Rp0</strong><small id="expenseCount">0 transaksi</small></article>
-    <article class="card transactions"><div class="card-icon"><b>📈 Jumlah Transaksi</b></div><strong id="transactionCount">0</strong><small>transaksi</small></article>
-  </section>
-
-  <section class="panel">
-    <div class="panel-head">
-      <div><h2>📋 Riwayat Kas</h2><p id="status">Memuat data...</p></div>
-      <div class="toolbar">
-        <select id="year"><option value="all">Semua tahun</option></select>
-        <select id="month"><option value="all">Semua bulan</option></select>
-        <select id="typeFilter"><option value="all">Semua jenis</option><option value="pemasukan">Pemasukan</option><option value="pengeluaran">Pengeluaran</option></select>
-        <input id="search" placeholder="🔎 Cari transaksi..." aria-label="Cari transaksi">
-        <button id="printBtn" class="btn secondary">🖨️ Cetak</button>
-      </div>
-    </div>
-    <div class="summary-strip">
-      <span>Menampilkan <b id="filteredCount">0</b> transaksi </span><span id="filterSummary"> dari semua data</span>
-    </div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Tanggal</th><th>Jenis</th><th>Keterangan</th><th>Nominal</th><th id="aksiHead">Akses</th></tr></thead>
-        <tbody id="rows"><tr><td colspan="5" class="empty">Belum ada data.</td></tr></tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="reports-grid">
-    <article class="panel report-card"><div class="section-kicker"></div><h2>📊 Rekap Bulan Terpilih</h2><div class="bar"><span>- Pemasukan      </span><b id="selectedIncome">     Rp0</b></div><div class="progress"><i id="incomeBar"></i></div><div class="bar"><span>- Pengeluaran     </span><b id="selectedExpense">    Rp0</b></div><div class="progress"><i id="expenseBar"></i></div><div class="report-balance"><span>Saldo periode   </span><strong id="selectedBalance"> Rp0</strong></div></article>
-  </section>
-
-  <section id="adminPanel" class="panel hidden admin-panel">
-    <div class="panel-head"><div><div class="section-kicker">MODE BENDAHARA</div><h2>🧾 Kelola Transaksi</h2><p id="loginStatus">Akses Bendahara aktif.</p></div><div class="admin-actions"><button id="changePasswordBtn" class="btn secondary">🔑 Ganti Password</button><button id="logoutBtn" class="btn danger">Keluar</button></div></div>
-    <form id="txForm" class="form">
-      <input type="hidden" id="editId">
-      <label>Tanggal<input type="date" id="tanggal" required></label>
-      <label>Jenis<select id="jenis"><option value="pemasukan">Masuk</option><option value="pengeluaran">Keluar</option></select></label>
-      <label>Nominal (Rp)<input type="number" id="nominal" min="1" step="1" required placeholder="Contoh: 50000"></label>
-      <label class="wide">Keterangan<input id="keterangan" maxlength="150" placeholder="Contoh: Infaq Jumat" required></label>
-      <div class="form-actions"><button class="btn primary" type="submit" id="saveBtn">➕ Simpan Transaksi</button><button class="btn secondary" type="button" id="cancelBtn">Batal</button></div>
-    </form>
-  </section>
-
-  <section class="notice"><b>🔎 Transparansi:</b> Laporan kas dapat dilihat seluruh warga. <b>🔐 Hak tambah, edit, dan hapus hanya Bendahara.</b></section>
+<nav class="tabs" aria-label="Menu aplikasi">
+ <button class="tab active" data-tab="home">🏠 Beranda</button><button class="tab" data-tab="kas">💰 Kas Masjid</button><button class="tab" data-tab="takmir">👥 Takmir</button><button class="tab" data-tab="imam">🎙️ Khatib & Imam</button><button class="tab" data-tab="tpa">📚 TPA</button><button class="tab" data-tab="admin">⚙️ Pengaturan</button>
+</nav>
+<div id="globalNotice" class="notice hidden"></div>
+<main>
+<section id="home" class="section active">
+ <div class="grid">
+  <div class="card span-8"><div class="eyebrow" style="color:var(--green)">Assalamu’alaikum warahmatullahi wabarakatuh</div><h2 style="font-size:24px;margin:8px 0">Selamat datang di Masjid Al-Muqarrabillah</h2><p class="muted">Pusat informasi kegiatan, transparansi kas, jadwal ibadah, dan pendidikan Al-Qur’an bagi jamaah Masjid Al-Muqarrabillah Kiyaran.</p><div class="notice ok">Mari memakmurkan masjid dengan salat berjamaah, ilmu, sedekah, dan ukhuwah Islamiyah.</div></div>
+  <div class="card span-4"><h2>🕰️ Jadwal Salat Hari Ini</h2><div class="smallnote">Sawit, Boyolali · waktu perkiraan berdasarkan layanan jadwal salat daring</div><div class="prayer-grid" id="prayerGrid" style="margin-top:12px"><div class="empty">Mengambil jadwal…</div></div><p class="smallnote">Mohon cocokkan dengan jadwal resmi takmir/Kemenag setempat.</p></div>
+ </div>
+ <div class="grid">
+  <div class="card span-4"><div class="label">TOTAL PEMASUKAN</div><div class="metric in" id="homeIn">Rp0</div><div class="smallnote">Sesuai transaksi yang tercatat</div></div>
+  <div class="card span-4"><div class="label">TOTAL PENGELUARAN</div><div class="metric out" id="homeOut">Rp0</div><div class="smallnote">Sesuai transaksi yang tercatat</div></div>
+  <div class="card span-4"><div class="label">SALDO SAAT INI</div><div class="metric balance" id="homeBalance">Rp0</div><div class="smallnote">Pemasukan dikurangi pengeluaran</div></div>
+ </div>
+ <div class="grid"><div class="card span-7"><div class="row"><h2>📢 Informasi Kegiatan Masjid</h2><button class="secondary small" onclick="switchTab('admin')">Kelola</button></div><div id="homeActivities"><div class="empty">Belum ada informasi kegiatan.</div></div></div><div class="card span-5"><h2>📌 Ringkasan Kas Terbaru</h2><div id="homeRecent"><div class="empty">Belum ada transaksi.</div></div><button class="secondary" onclick="switchTab('kas')">Lihat laporan kas</button></div></div>
+</section>
+<section id="kas" class="section">
+ <div class="grid"><div class="card span-12"><div class="row"><div><h2>💰 Laporan Kas Masjid</h2><p class="muted" style="margin:5px 0">Transparan, terperinci, dan dapat difilter berdasarkan periode.</p></div><div class="actions"><button class="secondary" onclick="exportExcel()">Unduh Excel</button><button class="secondary" onclick="exportPDF()">Unduh PDF</button><button id="addTxBtn" onclick="openTxModal()" class="hidden">＋ Transaksi</button></div></div>
+ <div class="formgrid" style="margin-top:14px"><div class="field"><label for="filterYear">Tahun</label><select id="filterYear" onchange="renderTransactions()"><option value="all">Semua tahun</option></select></div><div class="field"><label for="filterMonth">Bulan</label><select id="filterMonth" onchange="renderTransactions()"><option value="all">Semua bulan</option><option value="01">Januari</option><option value="02">Februari</option><option value="03">Maret</option><option value="04">April</option><option value="05">Mei</option><option value="06">Juni</option><option value="07">Juli</option><option value="08">Agustus</option><option value="09">September</option><option value="10">Oktober</option><option value="11">November</option><option value="12">Desember</option></select></div></div>
+ <div class="grid" style="margin-bottom:0"><div class="card span-4"><div class="label">PEMASUKAN PER FILTER</div><div class="metric in" id="kasIn">Rp0</div></div><div class="card span-4"><div class="label">PENGELUARAN PER FILTER</div><div class="metric out" id="kasOut">Rp0</div></div><div class="card span-4"><div class="label">SALDO AKHIR PER FILTER</div><div class="metric balance" id="kasBalance">Rp0</div></div></div>
+ <div class="tablewrap"><table id="txTable"><thead><tr><th>Tanggal</th><th>Uraian / Kategori</th><th>Pemasukan</th><th>Pengeluaran</th><th>Saldo berjalan</th><th>Bukti</th><th class="manageCol hidden">Aksi</th></tr></thead><tbody id="txBody"></tbody></table></div><div class="smallnote" id="txFoot"></div>
+ </div></div>
+</section>
+<section id="takmir" class="section"><div class="grid"><div class="card span-12"><div class="row"><div><h2>👥 Susunan Pengurus Takmir</h2><p class="muted">Periode kepengurusan dan bidang pelayanan masjid.</p></div><button id="addPengurusBtn" class="hidden" onclick="openRecordModal('pengurus')">＋ Tambah Pengurus</button></div><div id="pengurusList" class="grid"><div class="empty">Data pengurus belum diisi.</div></div></div></div></section>
+<section id="imam" class="section"><div class="grid"><div class="card span-12"><div class="row"><div><h2>🎙️ Khatib Jumat & Imam</h2><p class="muted">Jadwal ibadah dan petugas masjid.</p></div><button id="addImamBtn" class="hidden" onclick="openRecordModal('imam')">＋ Tambah Jadwal</button></div><div class="tablewrap"><table><thead><tr><th>Tanggal</th><th>Jenis Tugas</th><th>Nama</th><th>Keterangan</th><th class="manageCol hidden">Aksi</th></tr></thead><tbody id="imamBody"></tbody></table></div></div></div></section>
+<section id="tpa" class="section"><div class="grid"><div class="card span-6"><div class="row"><h2>🧒 Data Santri</h2><button id="addSantriBtn" class="hidden small" onclick="openRecordModal('santri')">＋ Santri</button></div><div id="santriList"><div class="empty">Data santri belum diisi.</div></div></div><div class="card span-6"><div class="row"><h2>👩‍🏫 Ustadz & Ustadzah</h2><button id="addUstadzBtn" class="hidden small" onclick="openRecordModal('ustadz')">＋ Pengajar</button></div><div id="ustadzList"><div class="empty">Data pengajar belum diisi.</div></div></div><div class="card span-12"><div class="row"><h2>📖 Bahan Ajar & Dokumen</h2><button id="addBahanBtn" class="hidden" onclick="openRecordModal('bahan')">＋ Tambah Bahan</button></div><p class="muted">Tautan dokumen dapat mengarah ke Google Drive. Atur akses dokumen di Drive agar jamaah dapat membukanya.</p><div id="bahanList"><div class="empty">Belum ada bahan ajar.</div></div></div></div></section>
+<section id="admin" class="section"><div class="grid">
+ <div class="card span-6"><h2>🔐 Akses Bendahara / Takmir</h2><p class="muted">Jamaah dapat melihat data. Pengelolaan data hanya untuk akun yang telah diberi peran bendahara atau takmir di Firebase.</p><div id="authStatus" class="notice">Memeriksa status aplikasi…</div><form id="loginForm" onsubmit="login(event)" style="margin-top:12px"><div class="formgrid"><div class="field full"><label>Email pengurus</label><input type="email" id="loginEmail" required autocomplete="username" placeholder="nama@email.com"></div><div class="field full"><label>Kata sandi</label><input type="password" id="loginPassword" required autocomplete="current-password"></div></div><div class="actions" style="margin-top:12px"><button type="submit">Masuk</button><button type="button" class="secondary" onclick="logout()">Keluar</button></div></form><p class="smallnote">Akun bendahara dibuat melalui Firebase Authentication. Setelah itu, UID akun diberi role di koleksi <code>users</code> melalui Firebase Console.</p></div>
+ <div class="card span-6"><h2>⚙️ Konfigurasi Aplikasi</h2><p class="muted">Masukkan konfigurasi Firebase di dalam file HTML agar data tersimpan dan tersinkron untuk semua jamaah. Jangan memasukkan kata sandi atau kunci privat Google ke file publik.</p><div id="configStatus" class="notice"></div><div class="notice">Google Drive: gunakan tautan folder bersama untuk bukti transaksi dan bahan ajar. Pengunggahan langsung ke Drive melalui API memerlukan konfigurasi OAuth tersendiri.</div><hr class="divider"><h3>Petunjuk singkat</h3><ol class="smallnote"><li>Buat/ pilih proyek di Firebase Console.</li><li>Aktifkan Firestore Database dan Authentication (Email/Password).</li><li>Salin konfigurasi aplikasi web Firebase ke bagian <code>FIREBASE_CONFIG</code> di bawah.</li><li>Pasang Firestore Rules yang aman (disediakan pada catatan pengaturan terpisah).</li><li>Unggah file ini sebagai <code>index.html</code> ke repositori GitHub Pages.</li></ol><p><a href="https://console.firebase.google.com/" target="_blank" rel="noopener">Buka Firebase Console ↗</a> · <a href="https://drive.google.com/" target="_blank" rel="noopener">Buka Google Drive ↗</a></p></div>
+ <div class="card span-12"><h2>📢 Kelola Informasi Kegiatan</h2><div class="row"><p class="muted">Tambahkan pengumuman kajian, kerja bakti, pengajian, atau agenda lainnya.</p><button id="addActivityBtn" class="hidden" onclick="openRecordModal('activity')">＋ Kegiatan</button></div><div id="adminActivities"></div></div>
+ </div></section>
 </main>
-
-<footer><strong>Masjid Al-Muqarrabillah</strong><br>Makmur Masjidnya • Berkah Warganya</footer>
-
-<div id="loginModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
-  <div class="modal-card">
-    <button class="modal-close" data-close="loginModal">×</button>
-    <div class="modal-icon">🔐</div><h2 id="loginTitle">Login Bendahara</h2><p>Masukkan password Bendahara. Email tidak perlu diketik.</p>
-    <label>Password<input id="loginPassword" type="password" autocomplete="current-password" placeholder="Masukkan password"></label>
-    <button id="doLoginBtn" class="btn primary full">LOGIN</button>
-    <p class="modal-help">Jika password lupa, gunakan email pemulihan Firebase atau minta pengelola aplikasi melakukan reset.</p>
-  </div>
+<footer class="foot">Masjid Al-Muqarrabillah Kiyaran · Aplikasi informasi dan transparansi jamaah<br>Data jadwal salat adalah perkiraan; konfirmasi waktu resmi kepada takmir setempat.</footer>
 </div>
-
-<div id="passwordModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="passwordTitle">
-  <div class="modal-card">
-    <button class="modal-close" data-close="passwordModal">×</button>
-    <div class="modal-icon">🔑</div><h2 id="passwordTitle">Ganti Password</h2><p>Masukkan password lama dan password baru.</p>
-    <label>Password lama<input id="oldPassword" type="password" autocomplete="current-password"></label>
-    <label>Password baru<input id="newPassword" type="password" autocomplete="new-password" minlength="6"></label>
-    <label>Ulangi password baru<input id="newPassword2" type="password" autocomplete="new-password" minlength="6"></label>
-    <button id="savePasswordBtn" class="btn primary full">Simpan Password</button>
-  </div>
-</div>
-
-<div id="toast" class="toast"></div>
-<script type="module" src="app.js"></script>
-</body>
-</html>
+<div class="modalback" id="modalBack" onclick="if(event.target===this)closeModal()"><div class="modal"><div class="row"><h2 id="modalTitle">Form</h2><button class="secondary small" onclick="closeModal()">Tutup</button></div><form id="modalForm" onsubmit="saveModal(event)"><div id="modalFields" class="formgrid"></div><hr class="divider"><div class="actions"><button type="submit">Simpan</button><button type="button" class="secondary" onclick="closeModal()">Batal</button></div></form></div></div>
+<script>
+/* ==========================================================
+   KONFIGURASI: tempel nilai dari Firebase Console di bawah.
+   Tanpa konfigurasi, aplikasi berjalan dalam mode demo lokal.
+   ========================================================== */
+const FIREBASE_CONFIG = {
+  apiKey: "ISI_API_KEY",
+  authDomain: "ISI_PROJECT_ID.firebaseapp.com",
+  projectId: "ISI_PROJECT_ID",
+  storageBucket: "ISI_PROJECT_ID.firebasestorage.app",
+  messagingSenderId: "ISI_MESSAGING_SENDER_ID",
+  appId: "ISI_APP_ID"
+};
+const FIREBASE_ENABLED = FIREBASE_CONFIG.apiKey !== "ISI_API_KEY" && FIREBASE_CONFIG.projectId !== "ISI_PROJECT_ID";
+const $ = id => document.getElementById(id);
+const rupiah = n => new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',maximumFractionDigits:0}).format(Number(n)||0);
+const escapeHTML = s => String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const todayISO = () => {const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
+const collections = ['transactions','activities','pengurus','imam','santri','ustadz','bahan'];
+let db=null, auth=null, currentUser=null, userRole='jamaah', unsubscribers=[], editTarget=null, modalType=null;
+let data={transactions:[],activities:[],pengurus:[],imam:[],santri:[],ustadz:[],bahan:[]};
+const demoSeed={transactions:[],activities:[],pengurus:[],imam:[],santri:[],ustadz:[],bahan:[]};
+function notice(msg,type=''){const n=$('globalNotice');n.textContent=msg;n.className='notice '+type;n.classList.remove('hidden')}
+function switchTab(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===id));document.querySelectorAll('.section').forEach(s=>s.classList.toggle('active',s.id===id));window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tab)));
+function canManage(){return ['bendahara','takmir','admin'].includes(userRole)}
+function updatePermissions(){['addTxBtn','addPengurusBtn','addImamBtn','addSantriBtn','addUstadzBtn','addBahanBtn','addActivityBtn'].forEach(id=>$(id).classList.toggle('hidden',!canManage()));document.querySelectorAll('.manageCol').forEach(el=>el.classList.toggle('hidden',!canManage()));$('authStatus').innerHTML=currentUser?`Masuk sebagai <b>${escapeHTML(currentUser.email||'pengurus')}</b> · Peran: <b>${escapeHTML(userRole)}</b>`:'Belum masuk. Jamaah tetap dapat melihat informasi.'}
+function persistDemo(){localStorage.setItem('almq_demo_data',JSON.stringify(data))}
+function loadDemo(){try{data={...demoSeed,...JSON.parse(localStorage.getItem('almq_demo_data')||'{}')}}catch{data={...demoSeed}};renderAll()}
+async function initFirebase(){if(!FIREBASE_ENABLED){$('configStatus').textContent='Belum terhubung ke Firebase. Mode demo aktif: data hanya tersimpan di browser/perangkat ini, bukan dibagikan ke jamaah.';loadDemo();$('authStatus').textContent='Mode demo lokal aktif. Login belum tersedia.';return}
+ try{const appMod=await import('https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js');const fs=await import('https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js');const au=await import('https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js');const app=appMod.initializeApp(FIREBASE_CONFIG);db=fs.getFirestore(app);auth=au.getAuth(app);window.__fs=fs;window.__au=au;$('configStatus').textContent='Konfigurasi Firebase terisi. Memuat data…';au.onAuthStateChanged(auth,async user=>{currentUser=user;userRole='jamaah';if(user){try{const snap=await fs.getDoc(fs.doc(db,'users',user.uid));if(snap.exists())userRole=snap.data().role||'jamaah'}catch(e){console.warn(e)}}updatePermissions();listenCollections()});}catch(e){console.error(e);$('configStatus').textContent='Firebase gagal dimuat: '+e.message;notice('Koneksi Firebase gagal. Periksa konfigurasi dan aturan Firestore.','error');loadDemo()}}
+function listenCollections(){unsubscribers.forEach(fn=>fn());unsubscribers=[];for(const name of collections){const unsub=window.__fs.onSnapshot(window.__fs.collection(db,name),snap=>{data[name]=snap.docs.map(d=>({id:d.id,...d.data()}));renderAll()},err=>{console.error(name,err);notice('Tidak dapat membaca '+name+'. Periksa Firestore Rules.','error')});unsubscribers.push(unsub)}}
+async function login(e){e.preventDefault();if(!auth){notice('Firebase belum dikonfigurasi. Isi FIREBASE_CONFIG terlebih dahulu.','error');return}try{await window.__au.signInWithEmailAndPassword(auth,$('loginEmail').value.trim(),$('loginPassword').value);notice('Berhasil masuk.','ok')}catch(err){notice('Gagal masuk: '+err.message,'error')}}
+async function logout(){if(auth){try{await window.__au.signOut(auth);notice('Anda telah keluar.','ok')}catch(e){notice(e.message,'error')}}else{currentUser=null;userRole='jamaah';updatePermissions()}}
+function renderAll(){renderTransactions();renderMetrics();renderActivities();renderPengurus();renderImam();renderTPA();renderYears();updatePermissions()}
+function renderMetrics(){const tx=data.transactions;const ins=tx.filter(t=>t.type==='in').reduce((a,t)=>a+Number(t.amount||0),0),outs=tx.filter(t=>t.type==='out').reduce((a,t)=>a+Number(t.amount||0),0);$('homeIn').textContent=rupiah(ins);$('homeOut').textContent=rupiah(outs);$('homeBalance').textContent=rupiah(ins-outs)}
+function renderYears(){const sel=$('filterYear'),old=sel.value;const years=[...new Set(data.transactions.map(t=>(t.date||'').slice(0,4)).filter(Boolean))].sort().reverse();sel.innerHTML='<option value="all">Semua tahun</option>'+years.map(y=>`<option value="${y}">${y}</option>`).join('');if(years.includes(old))sel.value=old;else sel.value='all'}
+function renderTransactions(){const year=$('filterYear').value,month=$('filterMonth').value;const list=[...data.transactions].filter(t=>(year==='all'||(t.date||'').startsWith(year))&&(month==='all'||(t.date||'').slice(5,7)===month)).sort((a,b)=>(a.date||'').localeCompare(b.date||'')||(a.createdAt||0)-(b.createdAt||0));let balance=0,ins=0,outs=0;const rows=list.map(t=>{const amount=Number(t.amount||0);if(t.type==='in'){balance+=amount;ins+=amount}else{balance-=amount;outs+=amount}return `<tr><td>${escapeHTML(t.date||'—')}</td><td><b>${escapeHTML(t.description||'—')}</b><br><span class="tag">${escapeHTML(t.category||'Umum')}</span></td><td class="num" style="color:#087a51">${t.type==='in'?rupiah(amount):'—'}</td><td class="num" style="color:#c04b3d">${t.type==='out'?rupiah(amount):'—'}</td><td class="num"><b>${rupiah(balance)}</b></td><td>${t.proof?`<a href="${escapeHTML(t.proof)}" target="_blank" rel="noopener">Buka bukti ↗</a>`:'—'}</td>${canManage()?`<td><div class="actions"><button class="secondary small" onclick="editRecord('transactions','${t.id}')">Edit</button><button class="danger small" onclick="deleteRecord('transactions','${t.id}')">Hapus</button></div></td>`:''}</tr>`}).join('');$('txBody').innerHTML=rows||'<tr><td colspan="7" class="empty">Belum ada transaksi pada periode ini.</td></tr>';$('kasIn').textContent=rupiah(ins);$('kasOut').textContent=rupiah(outs);$('kasBalance').textContent=rupiah(ins-outs);$('txFoot').textContent=`${list.length} transaksi · Saldo berjalan dihitung dari transaksi dalam periode terpilih, diurutkan berdasarkan tanggal.`;document.querySelectorAll('#txTable .manageCol').forEach(el=>el.classList.toggle('hidden',!canManage()));$('homeRecent').innerHTML=[...data.transactions].sort((a,b)=>(b.date||'').localeCompare(a.date||'')).slice(0,5).map(t=>`<div class="listitem"><div class="row"><b>${escapeHTML(t.description||'Transaksi')}</b><b style="color:${t.type==='in'?'#087a51':'#c04b3d'}">${t.type==='in'?'+':'−'}${rupiah(t.amount)}</b></div><div class="smallnote">${escapeHTML(t.date||'')} · ${escapeHTML(t.category||'Umum')}</div></div>`).join('')||'<div class="empty">Belum ada transaksi.</div>'}
+function renderActivities(){const items=[...data.activities].sort((a,b)=>(a.date||'').localeCompare(b.date||''));const html=items.map(a=>`<div class="listitem"><div class="row"><b>${escapeHTML(a.title)}</b><span class="tag">${escapeHTML(a.date||'Jadwal menyusul')}</span></div><div>${escapeHTML(a.description||'')}</div>${a.location?`<div class="smallnote">📍 ${escapeHTML(a.location)}</div>`:''}${canManage()?`<div class="actions" style="margin-top:7px"><button class="secondary small" onclick="editRecord('activities','${a.id}')">Edit</button><button class="danger small" onclick="deleteRecord('activities','${a.id}')">Hapus</button></div>`:''}</div>`).join('')||'<div class="empty">Belum ada informasi kegiatan.</div>';$('homeActivities').innerHTML=html;$('adminActivities').innerHTML=html}
+function renderPengurus(){const html=data.pengurus.map(p=>`<div class="card span-4"><div class="person"><div class="avatar">${escapeHTML((p.name||'?').slice(0,1).toUpperCase())}</div><div><b>${escapeHTML(p.name)}</b><div class="tag">${escapeHTML(p.position||'Pengurus')}</div><div class="smallnote">${escapeHTML(p.period||'Periode belum diisi')}</div>${p.contact?`<div class="smallnote">${escapeHTML(p.contact)}</div>`:''}${canManage()?`<div class="actions" style="margin-top:8px"><button class="secondary small" onclick="editRecord('pengurus','${p.id}')">Edit</button><button class="danger small" onclick="deleteRecord('pengurus','${p.id}')">Hapus</button></div>`:''}</div></div></div>`).join('');$('pengurusList').innerHTML=html||'<div class="empty span-12">Data pengurus belum diisi. Takmir dapat menambah data setelah login.</div>'}
+function renderImam(){const list=[...data.imam].sort((a,b)=>(a.date||'').localeCompare(b.date||''));$('imamBody').innerHTML=list.map(p=>`<tr><td>${escapeHTML(p.date||'—')}</td><td>${escapeHTML(p.kind||'—')}</td><td><b>${escapeHTML(p.name||'—')}</b></td><td>${escapeHTML(p.note||'—')}</td>${canManage()?`<td><button class="secondary small" onclick="editRecord('imam','${p.id}')">Edit</button> <button class="danger small" onclick="deleteRecord('imam','${p.id}')">Hapus</button></td>`:''}</tr>`).join('')||'<tr><td colspan="5" class="empty">Jadwal khatib dan imam belum diisi.</td></tr>'}
+function renderTPA(){const listView=(arr,sub='')=>arr.map(p=>`<div class="listitem"><b>${escapeHTML(p.name||p.title||'—')}</b><div class="smallnote">${escapeHTML(p.info||p.className||sub||'')}</div>${p.link?`<a href="${escapeHTML(p.link)}" target="_blank" rel="noopener">Buka dokumen ↗</a>`:''}${canManage()?`<div class="actions" style="margin-top:6px"><button class="secondary small" onclick="editRecord('${p._type}','${p.id}')">Edit</button><button class="danger small" onclick="deleteRecord('${p._type}','${p.id}')">Hapus</button></div>`:''}</div>`).join('')||'<div class="empty">Belum ada data.</div>'; $('santriList').innerHTML=listView(data.santri.map(x=>({...x,_type:'santri'})));$('ustadzList').innerHTML=listView(data.ustadz.map(x=>({...x,_type:'ustadz'})));$('bahanList').innerHTML=listView(data.bahan.map(x=>({...x,_type:'bahan'})))}
+const schemas={
+ transactions:{title:'Transaksi Kas',fields:[['date','Tanggal','date',true],['type','Jenis transaksi','select',true,['in|Pemasukan','out|Pengeluaran']],['description','Uraian transaksi','text',true],['category','Kategori','select',true,['Infaq|Infaq','Sedekah|Sedekah','Zakat|Zakat','Donasi|Donasi','Operasional|Operasional','Pembangunan|Pembangunan','Listrik/Air|Listrik/Air','TPA|TPA','Lainnya|Lainnya']],['amount','Nominal (rupiah)','number',true],['proof','Tautan bukti transaksi (Google Drive)','url',false],['note','Catatan','textarea',false]]},
+ activities:{title:'Informasi Kegiatan',fields:[['title','Nama kegiatan','text',true],['date','Tanggal','date',false],['location','Lokasi','text',false],['description','Deskripsi','textarea',true]]},
+ pengurus:{title:'Pengurus Takmir',fields:[['name','Nama lengkap','text',true],['position','Jabatan','text',true],['period','Periode kepengurusan','text',false],['contact','Kontak (opsional)','text',false]]},
+ imam:{title:'Jadwal Khatib / Imam',fields:[['date','Tanggal','date',true],['kind','Jenis tugas','select',true,['Khatib Jumat|Khatib Jumat','Imam Jumat|Imam Jumat','Imam Subuh|Imam Subuh','Imam Zuhur|Imam Zuhur','Imam Asar|Imam Asar','Imam Magrib|Imam Magrib','Imam Isya|Imam Isya','Imam Tarawih|Imam Tarawih','Penceramah|Penceramah','Lainnya|Lainnya']],['name','Nama petugas','text',true],['note','Keterangan','textarea',false]]},
+ santri:{title:'Data Santri',fields:[['name','Nama santri','text',true],['className','Kelas / kelompok','text',false],['info','Keterangan (opsional)','text',false]]},
+ ustadz:{title:'Data Ustadz / Ustadzah',fields:[['name','Nama pengajar','text',true],['info','Bidang / jadwal mengajar','text',false],['contact','Kontak (opsional)','text',false]]},
+ bahan:{title:'Bahan Ajar TPA',fields:[['title','Judul bahan ajar','text',true],['info','Jenis / keterangan (Iqra, Al-Qur’an, Kitab Kuning)','text',false],['link','Tautan Google Drive / dokumen','url',true]]}
+};
+function openTxModal(){openRecordModal('transactions')}
+function openRecordModal(type,record=null){if(!canManage()){notice('Silakan masuk dengan akun pengurus yang berwenang.','error');return}modalType=type;editTarget=record;$('modalTitle').textContent=(record?'Edit ':'Tambah ')+schemas[type].title;$('modalFields').innerHTML=schemas[type].fields.map(([key,label,kind,required,opts])=>{let val=record?.[key]??(key==='date'?todayISO():'');let control='';if(kind==='select')control=`<select name="${key}" ${required?'required':''}>${opts.map(o=>{const [v,l]=o.split('|');return `<option value="${escapeHTML(v)}" ${val===v?'selected':''}>${escapeHTML(l)}</option>`}).join('')}</select>`;else if(kind==='textarea')control=`<textarea name="${key}" ${required?'required':''}>${escapeHTML(val)}</textarea>`;else control=`<input name="${key}" type="${kind}" value="${escapeHTML(val)}" ${required?'required':''} ${kind==='number'?'min="1" step="1"':''} ${key==='amount'?'placeholder="Contoh: 150000"':''}>`;return `<div class="field ${kind==='textarea'?'full':''}"><label>${escapeHTML(label)}${required?' *':''}</label>${control}</div>`}).join('');$('modalBack').classList.add('show')}
+function closeModal(){$('modalBack').classList.remove('show');editTarget=null;modalType=null}
+async function saveModal(e){e.preventDefault();if(!canManage())return;const form=new FormData(e.target),obj={};for(const [k,v] of form.entries())obj[k]=v;if(modalType==='transactions'){obj.amount=Number(obj.amount);if(!Number.isFinite(obj.amount)||obj.amount<=0){notice('Nominal harus lebih dari nol.','error');return}}if(db){try{const fs=window.__fs;if(editTarget)await fs.updateDoc(fs.doc(db,modalType,editTarget.id),obj);else await fs.addDoc(fs.collection(db,modalType),{...obj,createdAt:Date.now(),createdBy:currentUser?.uid||''});closeModal();notice('Data berhasil disimpan dan tersinkron.','ok')}catch(err){notice('Gagal menyimpan: '+err.message,'error')}}else{if(editTarget){data[modalType]=data[modalType].map(x=>x.id===editTarget.id?{...x,...obj}:x)}else data[modalType].push({...obj,id:'local_'+Date.now(),createdAt:Date.now()});persistDemo();closeModal();renderAll();notice('Data tersimpan di browser ini saja (mode demo), belum dibagikan ke jamaah.','')}}
+function editRecord(type,id){if(!canManage())return;const rec=data[type].find(x=>x.id===id);if(rec)openRecordModal(type,rec)}
+async function deleteRecord(type,id){if(!canManage()||!confirm('Yakin ingin menghapus data ini? Tindakan ini tidak dapat dibatalkan.'))return;if(db){try{await window.__fs.deleteDoc(window.__fs.doc(db,type,id));notice('Data berhasil dihapus.','ok')}catch(e){notice('Gagal menghapus: '+e.message,'error')}}else{data[type]=data[type].filter(x=>x.id!==id);persistDemo();renderAll();notice('Data dihapus dari browser ini saja.','')}}
+function exportExcel(){const rows=getFilteredTransactions().map(t=>({Tanggal:t.date||'',Uraian:t.description||'',Kategori:t.category||'',Jenis:t.type==='in'?'Pemasukan':'Pengeluaran',Nominal:Number(t.amount||0),Bukti:t.proof||''}));if(!rows.length){alert('Tidak ada transaksi untuk diekspor.');return}if(window.XLSX){const ws=XLSX.utils.json_to_sheet(rows);const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,ws,'Laporan Kas');XLSX.writeFile(wb,'Laporan-Kas-Masjid-Al-Muqarrabillah.xlsx')}else downloadCSV(rows)}
+function downloadCSV(rows){const keys=Object.keys(rows[0]);const csv=[keys.join(';'),...rows.map(r=>keys.map(k=>'"'+String(r[k]??'').replace(/"/g,'""')+'"').join(';'))].join('\r\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8;'}));a.download='Laporan-Kas-Masjid.csv';a.click();URL.revokeObjectURL(a.href)}
+function getFilteredTransactions(){const y=$('filterYear').value,m=$('filterMonth').value;return [...data.transactions].filter(t=>(y==='all'||(t.date||'').startsWith(y))&&(m==='all'||(t.date||'').slice(5,7)===m)).sort((a,b)=>(a.date||'').localeCompare(b.date||''))}
+function exportPDF(){const list=getFilteredTransactions();if(!list.length){alert('Tidak ada transaksi untuk diekspor.');return}if(window.jspdf){const {jsPDF}=window.jspdf;const doc=new jsPDF();doc.setFontSize(15);doc.text('Laporan Kas Masjid Al-Muqarrabillah Kiyaran',14,16);doc.setFontSize(9);doc.text('Dicetak: '+new Date().toLocaleString('id-ID'),14,23);let y=32;doc.text('Tanggal | Uraian | Jenis | Nominal',14,y);y+=7;list.forEach(t=>{let line=`${t.date||''} | ${t.description||''} | ${t.type==='in'?'Masuk':'Keluar'} | ${rupiah(t.amount)}`;const lines=doc.splitTextToSize(line,180);if(y+lines.length*5>280){doc.addPage();y=15}doc.text(lines,14,y);y+=lines.length*5+2});doc.save('Laporan-Kas-Masjid-Al-Muqarrabillah.pdf')}else{const w=window.open('','_blank');w.document.write('<h2>Laporan Kas Masjid Al-Muqarrabillah</h2><table border="1" cellspacing="0" cellpadding="6"><tr><th>Tanggal</th><th>Uraian</th><th>Kategori</th><th>Jenis</th><th>Nominal</th></tr>'+list.map(t=>`<tr><td>${escapeHTML(t.date)}</td><td>${escapeHTML(t.description)}</td><td>${escapeHTML(t.category)}</td><td>${t.type==='in'?'Pemasukan':'Pengeluaran'}</td><td>${rupiah(t.amount)}</td></tr>`).join('')+'</table>');w.document.close();w.print()}}
+async function loadPrayer(){const now=new Date();$('dateMasehi').textContent=new Intl.DateTimeFormat('id-ID',{dateStyle:'full'}).format(now);try{const r=await fetch('https://api.aladhan.com/v1/timings?latitude=-7.92&longitude=110.60&method=20');if(!r.ok)throw Error('API');const j=await r.json();const d=j.data;const h=d.date.hijri;$('dateHijri').textContent=`${h.day} ${h.month.en} ${h.year} H`;const names=[['Imsak','Imsak'],['Subuh','Fajr'],['Terbit','Sunrise'],['Zuhur','Dhuhr'],['Asar','Asr'],['Magrib','Maghrib'],['Isya','Isha']];$('prayerGrid').innerHTML=names.map(([n,k])=>`<div class="prayer"><span>${n}</span><b>${escapeHTML((d.timings[k]||'—').split(' ')[0])}</b></div>`).join('')}catch(e){$('dateHijri').textContent='Tanggal Hijriah perlu diperiksa';$('prayerGrid').innerHTML='<div class="empty" style="grid-column:1/-1">Jadwal salat tidak dapat dimuat. Periksa koneksi internet.</div>'}}
+$('filterYear').value='all';$('filterMonth').value='all';initFirebase();loadPrayer();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body></html>
